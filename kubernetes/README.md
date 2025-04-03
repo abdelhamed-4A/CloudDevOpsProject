@@ -182,10 +182,10 @@ spec:
 
 | Issue                     | Solution |
 |---------------------------|----------------------------------|
-| **Pods Not Running**      | Check logs: `kubectl logs <pod-name> -n ivolve-namespace` |
+| **Pods Not Running**      | Check logs: `kubectl logs <pod-name> -n ivolve` |
 | **Ingress Not Working**   | Ensure NGINX is running: `kubectl get pods -n ingress-nginx` |
-| **curl Fails**            | Verify DNS resolution: `ping java-app.example.com` |
-| **Service Connectivity**  | Test with port forwarding: `kubectl port-forward svc/java-app-service -n ivolve-namespace 8081:80` |
+| **curl Fails**            | Verify DNS resolution: `ping myapp.ivolve.com` |
+| **Service Connectivity**  | Test with port forwarding: `kubectl port-forward svc/java-app-service -n ivolve 8081:80` |
 
 🎯 **Congratulations! Your Java web application is now running on Kubernetes!** 🚀
 
