@@ -32,8 +32,8 @@ This is a small Java web application developed using the Spring Boot framework. 
 
 ## 2️⃣ **Containerization with Docker**
 ### 🎯 **Task:**
-✅ Use the source code from [this repo](https://github.com/IbrahimAdell/FinalProjectCode.git).
-✅ Create a **Dockerfile** to containerize the application.
+✅ Use the source code from [this repo](https://github.com/IbrahimAdell/FinalProjectCode.git).  
+✅ Create a **Dockerfile** to containerize the application.  
 
 ### 🛠️ **Steps:**
 
@@ -134,11 +134,11 @@ docker push abdelhamed4a/java-web-app:v1
 ---
 
 ## 🎉 **Conclusion**
-✅ Successfully **set up a GitHub repository**.
-✅ Cloned and **built the application** with **Gradle**.
-✅ Integrated **SonarQube** for code analysis.
-✅ **Dockerized the application** and **pushed the image to DockerHub**.
-✅ Successfully **ran the application inside a container**. 🚀
+✅ Successfully **set up a GitHub repository**.  
+✅ Cloned and **built the application** with **Gradle**.  
+✅ Integrated **SonarQube** for code analysis.  
+✅ **Dockerized the application** and **pushed the image to DockerHub**.  
+✅ Successfully **ran the application inside a container**. 🚀  
 
 📌 **Next Steps:** Deploy the Dockerized application to Kubernetes! 🎯
 
