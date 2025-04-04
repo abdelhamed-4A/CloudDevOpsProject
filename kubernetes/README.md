@@ -40,6 +40,8 @@ Verify:
 kubectl get pods -n ingress-nginx
 ```
 
+![nginx](/assets/kubernetes/ingress-nginx.jpg)
+
 ### 🔹 3. Create a Namespace
 Create a dedicated namespace:
 ```bash
@@ -49,6 +51,8 @@ Verify:
 ```bash
 kubectl get namespaces
 ```
+
+![namespaces](/assets/kubernetes/namespaces.jpg)
 
 ### 🔹 4. Deploy the Application
 Apply the deployment manifest:
@@ -60,6 +64,8 @@ Check pod status:
 kubectl get pods -n ivolve
 ```
 
+![pods](/assets/kubernetes/pods.jpg)
+
 ### 🔹 5. Expose the Application
 Apply the service configuration:
 ```bash
@@ -70,6 +76,8 @@ Verify:
 kubectl get svc -n ivolve
 ```
 
+![pods](/assets/kubernetes/svc.jpg)
+
 ### 🔹 6. Configure Ingress
 Apply the Ingress resource to route traffic:
 ```bash
@@ -79,6 +87,8 @@ Check Ingress:
 ```bash
 kubectl get ingress -n ivolve
 ```
+
+![pods](/assets/kubernetes/ingress.jpg)
 
 ### 🔹 7. Update Hosts File
 Get Minikube IP:
@@ -103,10 +113,23 @@ Test with `curl`:
 ```bash
 curl http://myapp.ivolve.com
 ```
-Or open in a browser:
+
+![curl](/assets/kubernetes/curl.jpg)
+
+Or Configure Port Forwarding:
+```bash
+kubectl port-forward -n ivolve svc/app-service 9080:80
 ```
-http://myapp.ivolve.com
+
+![curl](/assets/kubernetes/portforward.jpg)
+
+Now access:
+
 ```
+http://localhost:9080
+```
+
+![curl](/assets/kubernetes/localhost.jpg)
 
 ---
 ## 📜 Kubernetes Manifests
