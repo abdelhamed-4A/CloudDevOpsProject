@@ -1,6 +1,6 @@
 # 🚀 Application Containerization with Docker
 
-This is a small Java web application developed using the Spring Boot framework. The application serves a simple webpage that displays "iVolve Technologies," "Hello, Spring Boot NTI," and the server's IP address. Additionally, the project features a basic MathService class, complete with unit tests for functionality verification.
+This is a small Java web application developed using the Spring Boot framework. The application serves a simple webpage that displays `iVolve Technologies` , `Hello, Spring Boot NTI` and the server's IP address. Additionally, the project features a basic MathService class, complete with unit tests for functionality verification.
 
 ## 📌 Table of Contents
 - [1️⃣ GitHub Repository Setup](#1️⃣-github-repository-setup)

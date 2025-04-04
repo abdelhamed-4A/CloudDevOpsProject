@@ -1,2 +1,4 @@
 .vscode
 .gradle
+.terraform.lock.hcl
+ivolve.pem
