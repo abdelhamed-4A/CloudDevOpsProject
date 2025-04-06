@@ -3,6 +3,10 @@
 ## 🚀 Overview
 The **CloudDevOpsProject** is a comprehensive DevOps pipeline that integrates multiple tools and technologies to automate and streamline the deployment process. This project demonstrates Infrastructure as Code (IaC), Continuous Integration (CI), Continuous Deployment (CD), containerization, and orchestration.
 
+## Project Archticture 
+
+![alt text](/assets/app/arch_proj.drawio2.svg)
+
 ## 🏗️ Tech Stack & Tools Used
 - **Infrastructure Provisioning**: Terraform 🏗️
 - **Configuration Management**: Ansible 🔧
