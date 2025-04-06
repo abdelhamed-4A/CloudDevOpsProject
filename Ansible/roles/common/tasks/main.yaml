@@ -1,0 +1,46 @@
+- name: Update package cache (RedHat)
+  yum:
+    update_cache: yes
+  when: ansible_os_family == "RedHat"
+  become: yes
+
+- name: Install git and OpenJDK (RedHat)
+  yum:
+    name:
+      - git
+      - java-17-amazon-corretto-devel
+    state: present
+  when: ansible_os_family == "RedHat"
+  become: yes
+
+- name: Install Required Packages (RedHat)
+  yum:
+    name:
+      - ca-certificates  # Keep this, no conflict
+    state: present
+  when: ansible_os_family == "RedHat"
+  become: yes
+
+- name: Install Docker (RedHat)
+  yum:
+    name:
+      - docker
+    state: present
+  when: ansible_os_family == "RedHat"
+  become: yes
+
+- name: Start and Enable Docker Service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+  when: ansible_os_family == "RedHat"
+  become: yes
+
+- name: Add ec2-user to docker group
+  user:
+    name: ec2-user
+    groups: docker
+    append: yes
+  when: ansible_os_family == "RedHat"
+  become: yes

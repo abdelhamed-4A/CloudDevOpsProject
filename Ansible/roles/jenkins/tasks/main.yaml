@@ -1,0 +1,38 @@
+- name: Update package cache (RedHat)
+  yum:
+    update_cache: yes
+  become: yes
+
+- name: Install Jenkins repository
+  get_url:
+    url: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    dest: /etc/yum.repos.d/jenkins.repo
+    mode: '0644'
+  become: yes
+
+- name: Import Jenkins GPG key
+  rpm_key:
+    key: https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+    state: present
+  become: yes
+
+- name: Install Jenkins
+  yum:
+    name: jenkins
+    state: present
+  become: yes
+
+- name: Ensure Jenkins directory permissions
+  file:
+    path: /var/lib/jenkins
+    owner: jenkins
+    group: jenkins
+    mode: '0755'
+  become: yes
+
+- name: Start and enable Jenkins service
+  systemd:
+    name: jenkins
+    state: started
+    enabled: yes
+  become: yes

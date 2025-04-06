@@ -69,7 +69,7 @@ java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
 
 🌐 **Access the App:** `http://localhost:8081`
 
-![App UI](/assets/app/localhost.jpg)
+![localhost](/assets/app/localhost.jpg)
 
 ---
 
@@ -77,10 +77,14 @@ java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
 
 📢 **Install & Run SonarQube Locally**
 ```bash
-sonar-scanner
+docker run -d --name sonarqube -p 9000:9000 sonarqube:latest
+./gradlew sonar
 ```
+- View the scan results at: http://localhost:9000/dashboard?id=ivolve
+
 📊 **Analyze Test Results in SonarQube Dashboard**
 
+![sonar](/assets/app/sonar.jpg)
 ---
 
 ### 🔹 **Dockerization**

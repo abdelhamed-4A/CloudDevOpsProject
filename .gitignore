@@ -2,3 +2,5 @@
 .gradle
 .terraform.lock.hcl
 ivolve.pem
+# Ignore Gradle build output directory
+build

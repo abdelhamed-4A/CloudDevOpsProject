@@ -1,0 +1,16 @@
+---
+- name: Configure all instances with common packages
+  hosts: all
+  roles:
+    - common
+
+- name: Configure master with Jenkins
+  hosts: 44.200.236.246
+  roles:
+    - jenkins
+    
+- name: Configure slave with SonarQube
+  hosts: 44.192.55.229
+  become: yes
+  roles:
+    - SonarQube
