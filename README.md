@@ -5,7 +5,7 @@ The **CloudDevOpsProject** is a comprehensive DevOps pipeline that integrates mu
 
 ## Project Archticture 
 
-![alt text](/assets/app/arch_proj.drawio2.svg)
+![alt text](/assets/app/arch_proj.svg)
 
 ## 🏗️ Tech Stack & Tools Used
 - **Infrastructure Provisioning**: Terraform 🏗️
